@@ -2,7 +2,8 @@ import express from "express"
 import { checkAuth, login, logout, signup, updateProfile } from "../controller/user.js"
 import { protectRoute } from "../middleware/auth.js"
 
-const router = express()
+const router = express.Router()
+
 
 router.post("/signup",signup)
 router.post("/login",login)
